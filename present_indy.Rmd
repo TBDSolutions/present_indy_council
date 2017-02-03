@@ -87,7 +87,7 @@ Minimal use of structured measures integrated at patient, program and system lev
 Some current glimmers of what's coming: 
 - metrics endorsed by the National Quality Forum using PHQ-9 are currently the only outcomes measures for behavioral health used in national initiatives (e.g. CCBHC)
 - these have been [implemented in HEDIS 2017](http://www.ncqa.org/hedis-quality-measurement/hedis-learning-collaborative/hedis-depression-measures)
-- Functional measures have been noted as a key gap in standard metrics and recent proposals have been made to integrate these into standards (cf. [NQF Person- and Family-Centered Care Measures](http://www.qualityforum.org/ProjectMeasures.aspx?projectID=73867))
+- Functional measures have been noted as a key gap in standard metrics and recent proposals have been made to integrate these into standards (cf. [NQF Person- and Family-Centered Care Measures](http://www.qualityforum.org/ProjectMeasures.aspx?projectID=73867) )
 
 ---
 class: center, middle
@@ -104,6 +104,7 @@ Kennedy Forum, *Fixing Behavioral Health Care in America*, 2015
 ???
 
 - National work on screening, assessment, and outcome tools
+- Treat-to-Target Approach (University of Washington)
 - We have enough tools. We don’t need more — we need effective implementation
 
 ---
@@ -157,7 +158,7 @@ by_tool %>%
 ---
 class: inverse, center, middle
 
-# 🤸💻
+# ⌨
 # Real World Uses
 
 ### **by** *people,* 
@@ -188,7 +189,9 @@ class: center, middle
 class: center, middle
 
 ### *e.g. connecting to Person-Centered Planning*
+
 ```{r eval=require('DT'), echo=FALSE, message=FALSE, warning=FALSE, out.height=8 }
+
 library(dplyr); library(DT); library(RColorBrewer)
 
 DT_in <- read.csv("df.csv")
@@ -209,10 +212,11 @@ DT_in %>%
 
 ```
 
+
 ---
 class: center, middle
 
-# 🏢
+# 
 ## In programs...
 
 ???
@@ -220,7 +224,6 @@ class: center, middle
 How do we use this data to assess 
 - the type of training needed
 - what types of new programs needed
-
 
 ---
 class: center, middle
@@ -294,6 +297,7 @@ b.	Gap Analysis to determine what’s missing
 i.	Not just a tool, but gaps between a screening tool and an assessment tool
 1.	To tackle a treat-to-target approach, that thoroughly uses quantitative assessment process with a common thread throughout, there have to be adequate tools for all of the things you’re seeing people for
 2.	Not enough to say “we have an assessment that measures everything we treat people for”—it’s possible that some assessment are really long, and you only use them once they’ve been in for a month, subsequently missing the screening section. 
+
 ---
 class: center, middle
 
@@ -336,8 +340,8 @@ class: center, middle
 - At the individual level, this means getting feedback from clinicians and patients
 - At the program and system level, it means investing in analytics
 - Build analytics capacity
-- Prototyping approach; stay curious
 - Sharing methods / reproducibility
+- Prototyping approach; stay curious
 - The "unreasonable effectiveness of data" to answer questions
 
 ---
