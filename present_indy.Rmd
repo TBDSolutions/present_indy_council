@@ -17,6 +17,10 @@ options(htmltools.dir.version = FALSE)
 background-image: url(http://www.tbdsolutions.com/wp-content/themes/tbdsolutions/images/logo.png)
 
 ---
+
+background-image: url(https://s-media-cache-ak0.pinimg.com/originals/51/fb/fd/51fbfdeb797a21c36b3d928a17867803.jpg)
+
+---
 class: inverse, center, middle
 
 # ᗑ
@@ -28,15 +32,6 @@ class: inverse, center, middle
 - We are already capturing data, and we will use it if we have it, so we must be purposeful about how we measure individuals
 - Treat our knowledge like a portfolio
 - A comprehensive portfolio has many types of data, and today we'll focus on one which providers are uniquely situated to collect and act upon.
-
----
-
-background-image: url(https://s-media-cache-ak0.pinimg.com/originals/51/fb/fd/51fbfdeb797a21c36b3d928a17867803.jpg)
-
-???
-
-- Great art project which had all attendees mark their height on a wall, until the names covered each other up.
-- Data is made up of individuals, and measurement based care will fail if it does not make information meaningful at the individual level as well as in the aggregate.
 
 ---
 class: center, middle
@@ -58,21 +53,8 @@ class: center, middle
 # ☉
 ### Using data at each point of contact to:
 - monitor response to treatment 
-- guide focus of session
 - prompt treatment changes 
-
-???
-
-Treat-to-Target Approach (University of Washington)
-
-["requires a change in the treatment plan every 10-12 weeks if the patient has not had at least a 50% improvement in symptoms using a validated measure."](https://aims.uw.edu/resource-library/measurement-based-treatment-target)
-
-[Used extensively in treating](https://www.ncbi.nlm.nih.gov/pubmed/clinical?term=%22treat%20to%20target%22):
-- diabetes
-- hypertension
-- arthritis
-
-Also applied to depression and other mental illnesses.
+- aggregate patient-level outcomes
 
 ---
 class: inverse, center, middle
@@ -82,12 +64,8 @@ class: inverse, center, middle
 
 ???
 
-Minimal use of structured measures integrated at patient, program and system level.
-
-Some current glimmers of what's coming: 
-- metrics endorsed by the National Quality Forum using PHQ-9 are currently the only outcomes measures for behavioral health used in national initiatives (e.g. CCBHC)
-- these have been [implemented in HEDIS 2017](http://www.ncqa.org/hedis-quality-measurement/hedis-learning-collaborative/hedis-depression-measures)
-- Functional measures have been noted as a key gap in standard metrics and recent proposals have been made to integrate these into standards (cf. [NQF Person- and Family-Centered Care Measures](http://www.qualityforum.org/ProjectMeasures.aspx?projectID=73867))
+- Some glimmers of what's coming: metrics endorsed by the National Quality 
+Forum using PHQ-9 are currently the only outcomes measures for behavioral health used in national initiatives (e.g. CCBHC)
 
 ---
 class: center, middle
@@ -104,12 +82,13 @@ Kennedy Forum, *Fixing Behavioral Health Care in America*, 2015
 ???
 
 - National work on screening, assessment, and outcome tools
+- Treat-to-Target Approach (University of Washington)
 - We have enough tools. We don’t need more — we need effective implementation
 
 ---
 class: center, middle
 
-### *Survey says...*
+# Survey says...
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width='100%', fig.height=6}
 library(readxl); library(tidyr); library(dplyr)
@@ -157,11 +136,10 @@ by_tool %>%
 ---
 class: inverse, center, middle
 
-# 🤸💻
+# ⌨
 # Real World Uses
 
-### **by** *people,* 
-### **not** *instead of people*
+**by** *people,* **not** *instead of people*
 
 ???
 
@@ -171,7 +149,7 @@ class: inverse, center, middle
 ---
 class: center, middle
 
-# ☤
+#⌛ 
 # With patients
 
 
@@ -215,7 +193,11 @@ DT_in %>%
 ---
 class: center, middle
 
+<<<<<<< HEAD
 #
+=======
+#  ⥁
+>>>>>>> parent of 28a0efe... FInal changes before posting for Travis to collab
 ## In programs...
 
 ???
@@ -255,7 +237,6 @@ leaflet() %>%
 ???
 
 - What if we could identify the geographic areas where people with a certain set of needs were clustered, so that we could build services to be more easily accessible to the people who need them?
-- Could be applied to purchasing office sites; defining caseloads for mobile workers
 
 ---
 class: inverse, center, middle
@@ -339,7 +320,6 @@ class: center, middle
 - At the individual level, this means getting feedback from clinicians and patients
 - At the program and system level, it means investing in analytics
 - Build analytics capacity
-- Prototyping approach; stay curious
 - Sharing methods / reproducibility
 - The "unreasonable effectiveness of data" to answer questions
 
