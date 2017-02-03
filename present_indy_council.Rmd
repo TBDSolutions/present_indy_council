@@ -1,0 +1,58 @@
+---
+title: Eh?
+author: Using Data to Inform Management, Advocacy, etc.
+output:
+  revealjs::revealjs_presentation:
+    theme: simple
+    #opts {default,simple,sky,serif,solarized,moon,night}
+    highlight: zenburn 
+    #opts {default,tango,pygments,kate,monochrome,espresso,zenburn,haddock}
+    center: true
+---
+
+# Overview 
+
+## A.   
+
+## B.  
+
+# 1.
+
+## A.
+
+## B.
+
+## C.
+
+## D.
+
+# 2.
+
+## A.
+
+## B.
+
+# 3.
+
+## A.
+
+## B.
+
+## C.
+
+# 4.
+
+## A.
+
+## B.
+
+## C.
+
+# ✎ By...
+
+----
+
+![](tbdSolutions-logo.png)
+
+## ☀ ☼ ☁ ☂ ★ ☎ ☑ ☔ ☤ ☺ ☻ ♡ ♥ ♺ ♻ ☂
+## ↺ ≅ ⊞ ⊷  ▦  ► ◀ ◉ ◍ ◎ ◐ ✿❆❉ ☛

@@ -1,0 +1,7 @@
+name: "Indiana Council Presentation"
+output_dir: "."
+navbar:
+  title: "Indiana Council Presentation"
+  left:
+    - text: "About"
+      href: present_indy_council.html

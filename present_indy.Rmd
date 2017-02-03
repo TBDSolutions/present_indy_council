@@ -1,0 +1,331 @@
+---
+title: "Measurement-Based Care"
+author: "opportunities in behavioral health"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["default","define-fonts.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+background-image: url(http://www.tbdsolutions.com/wp-content/themes/tbdsolutions/images/logo.png)
+
+---
+
+background-image: url(https://s-media-cache-ak0.pinimg.com/originals/51/fb/fd/51fbfdeb797a21c36b3d928a17867803.jpg)
+
+---
+class: inverse, center, middle
+
+# ᗑ
+# Where are we going?
+
+???
+
+- Regardless of one's beliefs about the ethics of measurement, the possibility of capturing all necessary details, etc.
+- We are already capturing data, and we will use it if we have it, so we must be purposeful about how we measure individuals
+- Treat our knowledge like a portfolio
+- A comprehensive portfolio has many types of data, and today we'll focus on one which providers are uniquely situated to collect and act upon.
+
+---
+class: center, middle
+
+# ▤  ▶  ☑
+## Person-Centered Measurement
+
+???
+
+- The field traditionally relies on narrative psychosocial assessments 
+- These aren’t actionable at an individual or systemic level
+- Tools bring objectivity and measurability to a sometimes subjective industry
+- Assist to keep services at the appropriate scope, time, and duration. 
+- Or, for providers, justify service provision decisions
+
+---
+class: center, middle
+
+# ☉
+### Using data at each point of contact to:
+- monitor response to treatment 
+- prompt treatment changes 
+- aggregate patient-level outcomes
+
+---
+class: inverse, center, middle
+
+# ✋
+# Where are we ~~going~~ now?
+
+???
+
+- Some glimmers of what's coming: metrics endorsed by the National Quality 
+Forum using PHQ-9 are currently the only outcomes measures for behavioral health used in national initiatives (e.g. CCBHC)
+
+---
+class: center, middle
+background-image: url(https://images-na.ssl-images-amazon.com/images/I/413ZHN3409L.jpg)
+background-size: 150px
+background-position: 8% 90%
+
+> ### "...only 18% of psychiatrists and 11% of psychologists in the United States routinely administer symptom rating scales to patients to monitor improvement. This is equivalent to treating hypertension without using a blood pressure cuff" 
+
+.pull-right[
+Kennedy Forum, *Fixing Behavioral Health Care in America*, 2015
+]
+
+???
+
+- National work on screening, assessment, and outcome tools
+- Treat-to-Target Approach (University of Washington)
+- We have enough tools. We don’t need more — we need effective implementation
+
+---
+class: center, middle
+
+# Survey says...
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width='100%', fig.height=6}
+library(readxl); library(tidyr); library(dplyr)
+library(plotly)
+
+survey <-
+  read_excel("national_tools_survey_2016.xlsx",
+             sheet = 2, skip = 2) 
+
+# Remove homegrown
+survey <- survey[1:50,-1]
+survey <- survey[,-10]
+survey <- survey[,-15]
+survey <- survey[,-25]
+survey <- survey[,-32]
+
+survey <-
+survey %>%
+  group_by(STATE) %>%
+  gather(tool,used, LOCUS:`ADI-R`) %>%
+  mutate(used = used == "X") %>%
+  ungroup()
+
+by_tool <-
+  survey %>%
+  group_by(tool) %>%
+  summarize(n = sum(used, na.rm = T)) %>%
+  mutate(tool = factor(tool, levels = unique(tool)[order(n, decreasing = T)])) %>%
+  ungroup() %>%
+  arrange(desc(n))
+
+by_tool %>%
+  plot_ly(x = ~tool, y = ~n) %>% 
+  add_bars() %>% 
+  layout(xaxis = list(title = "", tickangle = 45),
+         yaxis = list(title = "Number of states"))
+
+```
+
+???
+
+- Check out report [here](http://www.tbdsolutions.com/wp-content/uploads/2016/09/Behavioral-Health-Screening-Assessment-and-Outcomes-Tools.pdf)
+- [Data source](http://www.tbdsolutions.com/wp-content/uploads/2016/09/Michigan-and-National-Screening-Assessment-and-Outcomes-Tools-2016-09-1-1.xlsx)
+
+---
+class: inverse, center, middle
+
+# ⌨
+# Real World Uses
+
+**by** *people,* **not** *instead of people*
+
+???
+
+- 2 typical responses, from the same people: "We're not doing cookie cutter treatment" & "Can't it just tell me what I need to do?!"
+- Looking at actual process—from the point of assessment into pre-planning, tx plan, goals and objectives, authorizations, revisiting auths and need for services
+
+---
+class: center, middle
+
+#⌛ 
+# With patients
+
+
+???
+
+- Washington state study: For patients with depression, the median time to responding to treatment was reduced from approximately 64 weeks pre-implementation to 25 weeks post-implementation. *Unutzer J, Chan YF, Hafer E, et al.: Quality improvement with pay-for-performance incentives in integrated behavioral health care. Am J Public Health 102:e41-5, 2012*
+- How long does it take? Completing all the symptom severity scales takes ~20 minutes during the initial visit and ~5 minutes during follow-up visits
+- Can focus on items endorsed by the person and their supports as important
+- Consider how closely these are aligned with scope, intensity, duration
+- Could use relevant areas to prompt consideration of potential referrals to PT, nursing, OT, etc.
+
+
+---
+class: center, middle
+
+### *e.g. connecting to Person-Centered Planning*
+```{r eval=require('DT'), echo=FALSE, message=FALSE, warning=FALSE, out.height=8 }
+library(dplyr); library(DT); library(RColorBrewer)
+
+DT_in <- read.csv("df.csv")
+DT_in <- DT_in %>% select(-X)
+
+DT_in %>%
+  datatable(rownames = F,
+            colnames = c('Area','Need','Score','Type of Support','Frequency',
+                         'Daily Support Time','Important To/For'),
+            fillContainer = FALSE, 
+            extensions = 'Scroller',
+            options = list(dom = 't',
+                   deferRender = F,
+                   scrollY = 200,
+                   scroller = TRUE)) %>%
+  formatStyle('score', color = styleInterval(c(6), c("#800026","#ffffcc")),
+              backgroundColor = styleInterval(c(1:8), brewer.pal(9,"YlOrRd")))
+
+```
+
+---
+class: center, middle
+
+#  ⥁
+## In programs...
+
+???
+
+How do we use this data to assess 
+- the type of training needed
+- what types of new programs needed
+
+
+---
+class: center, middle
+
+### *e.g. mapping locations*
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width='100%', fig.height=6, eval=require('leaflet')}
+library(leaflet); library(dplyr)
+
+lat <- rnorm(700, mean = 43.2, sd = 1)
+lon <- rnorm(700, mean = -84.5, sd = 0.4)
+geocoded <- data.frame(lat,lon) 
+
+leaflet() %>%
+  fitBounds(
+    lng1 = -86,  
+    lat1 = 44,
+    lng2 = -85,
+    lat2 = 42
+  ) %>%
+  addProviderTiles("CartoDB.Positron") %>%
+  addMarkers(
+    data = geocoded,
+    lat = ~lat, 
+    lng = ~lon,
+    clusterOptions = markerClusterOptions()
+  )
+
+```
+
+???
+
+- What if we could identify the geographic areas where people with a certain set of needs were clustered, so that we could build services to be more easily accessible to the people who need them?
+
+---
+class: inverse, center, middle
+
+# ◵ 
+# Across a system
+
+???
+
+- State/National Level
+- Benchmarking, inter-agency comparisons
+
+---
+class: center, middle
+
+### *e.g. clustering*
+
+
+
+---
+class: inverse, center, middle
+
+# ↝
+# How to get from
+# here to there
+
+---
+class: center, middle
+
+# ⚠
+# Mind the gaps
+
+???
+a.	Do you have assessments that result in structured data, covering each population you serve and appropriate for each point of contact?
+i.	Screening, assessment, outcomes
+ii.	Defined expectations around minimum frequency for administration
+b.	Gap Analysis to determine what’s missing
+i.	Not just a tool, but gaps between a screening tool and an assessment tool
+1.	To tackle a treat-to-target approach, that thoroughly uses quantitative assessment process with a common thread throughout, there have to be adequate tools for all of the things you’re seeing people for
+2.	Not enough to say “we have an assessment that measures everything we treat people for”—it’s possible that some assessment are really long, and you only use them once they’ve been in for a month, subsequently missing the screening section. 
+---
+class: center, middle
+
+# ᚄ
+# Bridge the gaps
+
+???
+
+- Select tools to fill the gaps
+- Characteristics of tools
+- Approaches: One tool to rule them all, short suite
+- Educate clinicians to recognize tools as a complement and not a threat
+
+---
+class: center, middle
+
+### *example tools*
+
+---
+class: center, middle
+
+# ◇
+# Connect the diamonds
+
+???
+
+- Note: Diamonds indicate a decision point in process maps
+- Evaluate and tweak design of clinical processes
+- Define how tools are used as specific points around the care process?
+- Integrate into assessment/treatment planning/authorization/review process
+
+---
+class: center, middle
+
+# ⚛
+# Get to know
+
+???
+
+- At the individual level, this means getting feedback from clinicians and patients
+- At the program and system level, it means investing in analytics
+- Build analytics capacity
+- Sharing methods / reproducibility
+- The "unreasonable effectiveness of data" to answer questions
+
+---
+class: center, middle
+
+# ☛
+# Get to work
+
+???
+
+- Implementation science
+
+---
+background-image: url(http://www.tbdsolutions.com/wp-content/themes/tbdsolutions/images/logo.png)
+
