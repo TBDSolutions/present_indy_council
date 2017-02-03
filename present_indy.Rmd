@@ -188,7 +188,9 @@ class: center, middle
 class: center, middle
 
 ### *e.g. connecting to Person-Centered Planning*
+
 ```{r eval=require('DT'), echo=FALSE, message=FALSE, warning=FALSE, out.height=8 }
+
 library(dplyr); library(DT); library(RColorBrewer)
 
 DT_in <- read.csv("df.csv")
@@ -209,10 +211,11 @@ DT_in %>%
 
 ```
 
+
 ---
 class: center, middle
 
-# 🏢
+#
 ## In programs...
 
 ???
@@ -220,7 +223,6 @@ class: center, middle
 How do we use this data to assess 
 - the type of training needed
 - what types of new programs needed
-
 
 ---
 class: center, middle
@@ -294,6 +296,7 @@ b.	Gap Analysis to determine what’s missing
 i.	Not just a tool, but gaps between a screening tool and an assessment tool
 1.	To tackle a treat-to-target approach, that thoroughly uses quantitative assessment process with a common thread throughout, there have to be adequate tools for all of the things you’re seeing people for
 2.	Not enough to say “we have an assessment that measures everything we treat people for”—it’s possible that some assessment are really long, and you only use them once they’ve been in for a month, subsequently missing the screening section. 
+
 ---
 class: center, middle
 
