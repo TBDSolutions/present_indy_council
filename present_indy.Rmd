@@ -40,22 +40,33 @@ background-image: url(https://s-media-cache-ak0.pinimg.com/originals/51/fb/fd/51
 
 ---
 class: center, middle
+background-image: url(https://static1.fitbit.com/simple.b-cssdisabled-png.hc67aac363566dacfc23446af553b9bd8.pack?items=%2Fcontent%2Fassets%2Fflex%2Fimages%2Fapp-dashboard%2Fflex.png)
+background-size: 80px
+background-position: 8% 90%
 
 # ▤  ▶  ☑
 ## Person-Centered Measurement
 
+
+
 ???
 
 - The field traditionally relies on narrative psychosocial assessments 
+- Ever unhelpful GAF
 - These aren’t actionable at an individual or systemic level
 - Tools bring objectivity and measurability to a sometimes subjective industry
 - Assist to keep services at the appropriate scope, time, and duration. 
 - Or, for providers, justify service provision decisions
 
+
+- New tools (and the creative use of existing tools) allow for a more nuanced and complex understanding of individuals
+- Summarizing person to a single number (e.g. the GAF) is clearly reductive
+- What about 250k measures per day? A [recent study using wearables](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2001402) did just that
+
 ---
 class: center, middle
 
-# ☉
+# ☉➝☉➝☉➝☉➝☉➝☉
 ### Using data at each point of contact to:
 - monitor response to treatment 
 - guide focus of session
@@ -76,6 +87,7 @@ Also applied to depression and other mental illnesses.
 
 ---
 class: inverse, center, middle
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d4/Wikidata_Map_April_2016_Huge.png)
 
 # ✋
 # Where are we ~~going~~ now?
@@ -158,11 +170,13 @@ by_tool %>%
 ---
 class: inverse, center, middle
 
-# ⌨
 # Real World Uses
 
-### **by** *people,* 
-### **not** *instead of people*
+--
+
+### ~~*instead of* people~~
+### *by* people
+
 
 ???
 
@@ -216,12 +230,18 @@ DT_in %>%
 ---
 class: center, middle
 
-# 
-## In programs...
+# ⌨
+# In programs...
 
 ???
 
+What competitive advantage would this data provide for you relative to competitors?
+- Think of the value of your data as a product.  
+- How much is it worth now?  
+- How much could it be worth?
+
 How do we use this data to assess 
+- which activities add value
 - the type of training needed
 - what types of new programs needed
 
@@ -259,7 +279,7 @@ leaflet() %>%
 - Could be applied to purchasing office sites; defining caseloads for mobile workers
 
 ---
-class: inverse, center, middle
+class: center, middle
 
 # ◵ 
 # Across a system
@@ -274,7 +294,10 @@ class: center, middle
 
 ### *e.g. clustering*
 
+???
 
+- Hop out of presentation [to application](https://tbdsolutions.shinyapps.io/exploreSIS_node_mshn/)
+- Go to "Patterns of Need" in left bar and view clusters
 
 ---
 class: inverse, center, middle
@@ -284,10 +307,10 @@ class: inverse, center, middle
 # here to there
 
 ---
-class: center, middle
+class: inverse
+background-image: url(https://blogs.vmware.com/cloudops/files/2016/06/gap.jpg)
 
-# ⚠
-# Mind the gaps
+# ⚠ 1. Mind the gaps
 
 ???
 a.	Do you have assessments that result in structured data, covering each population you serve and appropriate for each point of contact?
@@ -299,10 +322,10 @@ i.	Not just a tool, but gaps between a screening tool and an assessment tool
 2.	Not enough to say “we have an assessment that measures everything we treat people for”—it’s possible that some assessment are really long, and you only use them once they’ve been in for a month, subsequently missing the screening section. 
 
 ---
-class: center, middle
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/28/Hobach_Canyon_steel_arch_bridge._Idaho_-_NARA_-_283681.jpg)
+background-size: contain
 
-# ᚄ
-# Bridge the gaps
+# ᚄ 2. Bridge the gaps
 
 ???
 
@@ -316,11 +339,15 @@ class: center, middle
 
 ### *example tools*
 
----
-class: center, middle
+- [DSM5 Cross-Cutting Symptom Measures](https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures)
+- [Kennedy Forum supplement](http://thekennedyforum-dot-org.s3.amazonaws.com/documents/MBC_supplement.pdf)
+- [PROMIS measures](http://www.healthmeasures.net/explore-measurement-systems/promis)
 
-# ◇
-# Connect the diamonds
+---
+class: inverse
+background-image: url(http://simplexmotion.com/wp-content/uploads/2015/06/Network-Abstract-Wallpaper.jpg)
+
+# ◇ 3. Connect the diamonds
 
 ???
 
@@ -330,10 +357,10 @@ class: center, middle
 - Integrate into assessment/treatment planning/authorization/review process
 
 ---
-class: center, middle
+background-image: url(https://static1.squarespace.com/static/55f45174e4b0fb5d95b07f39/55f45537e4b09d46d484695d/55f45566e4b09d46d485afd6/1361664651243/1000w/118414-116396.jpg)
+background-position: 50% 100%
 
-# ⚛
-# Get to know
+# ⚛ 4. Get to know
 
 ???
 
@@ -345,15 +372,28 @@ class: center, middle
 - The "unreasonable effectiveness of data" to answer questions
 
 ---
-class: center, middle
+background-image: url(http://www.publicdomainpictures.net/pictures/80000/velka/old-bicycle-on-a-wooden-floor.jpg)
+background-size: contain
+background-position: 50% 100%
 
-# ☛
-# Get to work
+# ☛ 5. Get to work
 
 ???
 
-- Implementation science
+It's a cycle
+
+**Knowledge Mobilization Steps**
+- *Identify Measurement Owners*  Identify the committees and individuals responsible for maintaining and improving performance on measures included in the portfolio
+-	*Identify Levers for Action*   Assist the team in identifying the key actions available to the organization in its existing functions for improving performance across the portfolio of measures.
+-	*Process for Decision Quality*  Work with committees and individuals to implement processes for improved decision quality using data.  Processes are based on research into organizational judgment and decision-making.
+-	*Map Flow of Information*  Map the flow of information through committees/departments to clarify patterns of communication and collaborative action.
+-	*Initiate PDSA Cycle* Assist team with initial measurements using vendor systems within the framework to evaluate KPIs that allow for measurement, and subsequent dialog about interventions, changes, or improvements as necessary.  
+-	*Expert Analysis*  Where detailed analysis is required, provide critical examination, detailed analysis, and recommendations.
+- *Assess Sustainability*
+For all project participants to enter into an on-going sustainment of the work that’s been accomplished so far, and reduce reliance upon external experts.  
 
 ---
+class: center, bottom
 background-image: url(http://www.tbdsolutions.com/wp-content/themes/tbdsolutions/images/logo.png)
 
+[tbdsolutions.com](www.tbdsolutions.com)
