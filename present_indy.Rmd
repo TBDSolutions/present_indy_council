@@ -42,7 +42,7 @@ background-image: url(https://s-media-cache-ak0.pinimg.com/originals/51/fb/fd/51
 class: center, middle
 background-image: url(https://static1.fitbit.com/simple.b-cssdisabled-png.hc67aac363566dacfc23446af553b9bd8.pack?items=%2Fcontent%2Fassets%2Fflex%2Fimages%2Fapp-dashboard%2Fflex.png)
 background-size: 80px
-background-position: 8% 90%
+background-position: 50% 90%
 
 # ▤  ▶  ☑
 ## Person-Centered Measurement
@@ -64,13 +64,16 @@ background-position: 8% 90%
 - What about 250k measures per day? A [recent study using wearables](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2001402) did just that
 
 ---
-class: center, middle
+class: inverse, center, middle
+background-image: url(http://www.publicdomainpictures.net/pictures/10000/velka/step-background-112876782627O8h.jpg)
+background-size: contain
 
 # ☉➝☉➝☉➝☉➝☉➝☉
-### Using data at each point of contact to:
-- monitor response to treatment 
-- guide focus of session
-- prompt treatment changes 
+## Use data at each contact to:
+
+### *monitor response to treatment* 
+### *guide focus of session*
+### *prompt treatment changes*
 
 ???
 
@@ -184,7 +187,9 @@ class: inverse, center, middle
 - Looking at actual process—from the point of assessment into pre-planning, tx plan, goals and objectives, authorizations, revisiting auths and need for services
 
 ---
-class: center, middle
+class: inverse, left, middle
+background-image: url(https://static.pexels.com/photos/72552/pexels-photo-72552.jpeg)
+background-size: contain
 
 # ☤
 # With patients
@@ -228,7 +233,9 @@ DT_in %>%
 
 
 ---
-class: center, middle
+class: inverse, center, middle
+background-image: url(https://static.pexels.com/photos/37009/pexels-photo.jpg)
+background-size: contain
 
 # ⌨
 # In programs...
@@ -279,7 +286,10 @@ leaflet() %>%
 - Could be applied to purchasing office sites; defining caseloads for mobile workers
 
 ---
-class: center, middle
+class: right, middle
+background-image: url(https://c1.staticflickr.com/8/7194/6927050552_f43f586ef9_b.jpg)
+background-size: 500px
+background-position: 0% 100%
 
 # ◵ 
 # Across a system
