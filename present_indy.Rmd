@@ -152,9 +152,6 @@ by_tool %>%
 class: inverse, center, middle
 
 # Real World Uses
-
---
-
 ### ~~*instead of* people~~
 ### *by* people
 
@@ -163,7 +160,7 @@ class: inverse, center, middle
 
 - 2 typical responses, from the same people: "We're not doing cookie cutter treatment" & "Can't it just tell me what I need to do?!"
 
-This is still a human process
+This is still a human process:
 - Natural clinical concern that this would be (a) reductive of individual complexity (b) a replacement of their clinical skills
 - Looking at actual process—from the point of assessment into pre-planning, tx plan, goals and objectives, authorizations, revisiting auths and need for services
 
@@ -361,19 +358,14 @@ background-size: contain
 
 ???
 
-- Select tools to fill the gaps
-- Characteristics of tools
-- Approaches: One tool to rule them all, short suite
-- Educate clinicians to recognize tools as a complement and not a threat
-
----
-class: center, middle
-
-### *example tools*
-
+Select tools to fill the gaps... *example tools*
 - [DSM5 Cross-Cutting Symptom Measures](https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures)
 - [Kennedy Forum supplement](http://thekennedyforum-dot-org.s3.amazonaws.com/documents/MBC_supplement.pdf)
 - [PROMIS measures](http://www.healthmeasures.net/explore-measurement-systems/promis)
+
+- Characteristics of tools
+- Approaches: One tool to rule them all, short suite
+- Educate clinicians to recognize tools as a complement and not a threat
 
 ---
 class: inverse
