@@ -56,10 +56,6 @@ background-position: 50% 90%
 - Ever unhelpful GAF
 - These aren’t actionable at an individual or systemic level
 - Tools bring objectivity and measurability to a sometimes subjective industry
-- Assist to keep services at the appropriate scope, time, and duration. 
-- Or, for providers, justify service provision decisions
-
-
 - New tools (and the creative use of existing tools) allow for a more nuanced and complex understanding of individuals
 - Summarizing person to a single number (e.g. the GAF) is clearly reductive
 - What about 250k measures per day? A [recent study using wearables](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2001402) did just that
@@ -77,14 +73,15 @@ Minimal use of structured measures integrated at patient, program and system lev
 - Poor penetration of tool use
 - Lack of consistency in gold standard tools
 
-Some current glimmers of what's coming: 
-- metrics endorsed by the National Quality Forum using PHQ-9 are currently the only outcomes measures for behavioral health used in national initiatives (e.g. CCBHC)
-- these have been [implemented in HEDIS 2017](http://www.ncqa.org/hedis-quality-measurement/hedis-learning-collaborative/hedis-depression-measures)
-- Functional measures have been noted as a key gap in standard metrics and recent proposals have been made to integrate these into standards (cf. [NQF Person- and Family-Centered Care Measures](http://www.qualityforum.org/ProjectMeasures.aspx?projectID=73867) )
-
 **How many of you have clinicians currently using cross-cutting measures from DSM5, or other brief symptom or functional instruments?**
 
 **How many of you are engaged in at least one value-based payment arrangement?**
+
+Some current glimmers of what's coming: 
+- metrics endorsed by NQF using PHQ-9 are currently only outcomes measures for behavioral health used nationally (e.g. CCBHC)
+- now [implemented in HEDIS 2017](http://www.ncqa.org/hedis-quality-measurement/hedis-learning-collaborative/hedis-depression-measures)
+- Functional measures noted as key gap in standard metrics (cf. [NQF Person- and Family-Centered Care Measures](http://www.qualityforum.org/ProjectMeasures.aspx?projectID=73867) )
+
 
 ---
 class: center, middle
@@ -101,7 +98,6 @@ Kennedy Forum, *Fixing Behavioral Health Care in America*, 2015
 ???
 
 - National work on screening, assessment, and outcome tools
-- Treat-to-Target Approach (University of Washington)
 - We have enough tools. We don’t need more — we need effective implementation
 
 ---
@@ -182,12 +178,11 @@ background-size: contain
 
 ???
 
-- Washington state study: For patients with depression, the median time to responding to treatment was reduced from approximately 64 weeks pre-implementation to 25 weeks post-implementation. *Unutzer J, Chan YF, Hafer E, et al.: Quality improvement with pay-for-performance incentives in integrated behavioral health care. Am J Public Health 102:e41-5, 2012*
-- How long does it take? Completing all the symptom severity scales takes ~20 minutes during the initial visit and ~5 minutes during follow-up visits
+- Washington study: For patients with depression, the median response to treatment reduced from ~64 weeks pre- to 25 weeks post-implementation. *Unutzer J, et al. 2012*
+- How long does it take? ~20 minutes during initial visit,  ~5 minutes during follow-up visits
 - Can focus on items endorsed by the person and their supports as important
 - Consider how closely these are aligned with scope, intensity, duration
 - Could use relevant areas to prompt consideration of potential referrals to PT, nursing, OT, etc.
-
 
 ---
 class: inverse, center, middle
@@ -261,6 +256,9 @@ How do we use this data to assess
 - which activities add value
 - the type of training needed
 - what types of new programs needed
+- justify service provision decisions
+- keep services at the appropriate scope, time, and duration. 
+
 
 ---
 class: center, middle
