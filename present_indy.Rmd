@@ -13,9 +13,10 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
-
+class: center, bottom
 background-image: url(http://www.tbdsolutions.com/wp-content/themes/tbdsolutions/images/logo.png)
 
+[bit.ly/tbd_mbc](http://bit.ly/tbd_mbc)
 ---
 class: inverse, center, middle
 
@@ -65,31 +66,6 @@ background-position: 50% 90%
 
 ---
 class: inverse, center, middle
-background-image: url(http://www.publicdomainpictures.net/pictures/10000/velka/step-background-112876782627O8h.jpg)
-background-size: contain
-
-# ☉➝☉➝☉➝☉➝☉➝☉
-## Use data at each contact to:
-
-### *monitor response to treatment* 
-### *guide focus of session*
-### *prompt treatment changes*
-
-???
-
-Treat-to-Target Approach (University of Washington)
-
-["requires a change in the treatment plan every 10-12 weeks if the patient has not had at least a 50% improvement in symptoms using a validated measure."](https://aims.uw.edu/resource-library/measurement-based-treatment-target)
-
-[Used extensively in treating](https://www.ncbi.nlm.nih.gov/pubmed/clinical?term=%22treat%20to%20target%22):
-- diabetes
-- hypertension
-- arthritis
-
-Also applied to depression and other mental illnesses.
-
----
-class: inverse, center, middle
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d4/Wikidata_Map_April_2016_Huge.png)
 
 # ✋
@@ -98,11 +74,17 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d4/Wikida
 ???
 
 Minimal use of structured measures integrated at patient, program and system level.
+- Poor penetration of tool use
+- Lack of consistency in gold standard tools
 
 Some current glimmers of what's coming: 
 - metrics endorsed by the National Quality Forum using PHQ-9 are currently the only outcomes measures for behavioral health used in national initiatives (e.g. CCBHC)
 - these have been [implemented in HEDIS 2017](http://www.ncqa.org/hedis-quality-measurement/hedis-learning-collaborative/hedis-depression-measures)
 - Functional measures have been noted as a key gap in standard metrics and recent proposals have been made to integrate these into standards (cf. [NQF Person- and Family-Centered Care Measures](http://www.qualityforum.org/ProjectMeasures.aspx?projectID=73867) )
+
+**How many of you have clinicians currently using cross-cutting measures from DSM5, or other brief symptom or functional instruments?**
+
+**How many of you are engaged in at least one value-based payment arrangement?**
 
 ---
 class: center, middle
@@ -184,6 +166,9 @@ class: inverse, center, middle
 ???
 
 - 2 typical responses, from the same people: "We're not doing cookie cutter treatment" & "Can't it just tell me what I need to do?!"
+
+This is still a human process
+- Natural clinical concern that this would be (a) reductive of individual complexity (b) a replacement of their clinical skills
 - Looking at actual process—from the point of assessment into pre-planning, tx plan, goals and objectives, authorizations, revisiting auths and need for services
 
 ---
@@ -203,6 +188,31 @@ background-size: contain
 - Consider how closely these are aligned with scope, intensity, duration
 - Could use relevant areas to prompt consideration of potential referrals to PT, nursing, OT, etc.
 
+
+---
+class: inverse, center, middle
+background-image: url(http://www.publicdomainpictures.net/pictures/10000/velka/step-background-112876782627O8h.jpg)
+background-size: contain
+
+# ☉➝☉➝☉➝☉➝☉➝☉
+## Use data at each contact to:
+
+### *monitor response to treatment* 
+### *guide focus of session*
+### *prompt treatment changes*
+
+???
+
+Treat-to-Target Approach (University of Washington)
+
+["requires a change in the treatment plan every 10-12 weeks if the patient has not had at least a 50% improvement in symptoms using a validated measure."](https://aims.uw.edu/resource-library/measurement-based-treatment-target)
+
+[Used extensively in treating](https://www.ncbi.nlm.nih.gov/pubmed/clinical?term=%22treat%20to%20target%22):
+- diabetes
+- hypertension
+- arthritis
+
+Also applied to depression and other mental illnesses.
 
 ---
 class: center, middle
@@ -282,6 +292,11 @@ leaflet() %>%
 
 ???
 
+Primary concerns:
+- Differentiate services from competitors
+- Work smart: Operate more efficiently (more quality per dollar)
+
+
 - What if we could identify the geographic areas where people with a certain set of needs were clustered, so that we could build services to be more easily accessible to the people who need them?
 - Could be applied to purchasing office sites; defining caseloads for mobile workers
 
@@ -296,7 +311,9 @@ background-position: 0% 100%
 
 ???
 
-- State/National Level
+State/National Level Primary concerns:
+- Reward quality performance
+- Improve outcomes for the population
 - Benchmarking, inter-agency comparisons
 
 ---
@@ -323,13 +340,20 @@ background-image: url(https://blogs.vmware.com/cloudops/files/2016/06/gap.jpg)
 # ⚠ 1. Mind the gaps
 
 ???
-a.	Do you have assessments that result in structured data, covering each population you serve and appropriate for each point of contact?
-i.	Screening, assessment, outcomes
-ii.	Defined expectations around minimum frequency for administration
-b.	Gap Analysis to determine what’s missing
-i.	Not just a tool, but gaps between a screening tool and an assessment tool
-1.	To tackle a treat-to-target approach, that thoroughly uses quantitative assessment process with a common thread throughout, there have to be adequate tools for all of the things you’re seeing people for
-2.	Not enough to say “we have an assessment that measures everything we treat people for”—it’s possible that some assessment are really long, and you only use them once they’ve been in for a month, subsequently missing the screening section. 
+
+Gap Analysis to determine what’s missing:
+
+**Cover all conditions / life areas** Do you have assessments that result in structured data, covering each population you serve and appropriate for each point of contact?
+
+**For each population served** To tackle a treat-to-target approach, that thoroughly uses quantitative assessment process with a common thread throughout, there have to be adequate tools for all of the things you’re seeing people for
+
+**Screening and assessment** Not just a tool, but gaps between a screening tool and an assessment tool. Not enough to say “we have an assessment that measures everything we treat people for”—it’s possible that some assessment are really long, and you only use them once they’ve been in for a month, subsequently missing the screening section. 
+
+**Used in clinical practice** Define expectations around minimum frequency for administration
+
+**Entered in EMR** 
+
+**Data is used to inform practice**
 
 ---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/28/Hobach_Canyon_steel_arch_bridge._Idaho_-_NARA_-_283681.jpg)
@@ -362,9 +386,12 @@ background-image: url(http://simplexmotion.com/wp-content/uploads/2015/06/Networ
 ???
 
 - Note: Diamonds indicate a decision point in process maps
-- Evaluate and tweak design of clinical processes
-- Define how tools are used as specific points around the care process?
-- Integrate into assessment/treatment planning/authorization/review process
+
+*Two critical processes:*
+- **Operational processes** (e.g. data collection, EMR workflow, communication, etc.)
+- **Clinical decision-making** (e.g. algorithms)
+
+- Define how tools are used as specific points around the care process?  e.g. Integrate into assessment/treatment planning/authorization/review process
 
 ---
 background-image: url(https://static1.squarespace.com/static/55f45174e4b0fb5d95b07f39/55f45537e4b09d46d484695d/55f45566e4b09d46d485afd6/1361664651243/1000w/118414-116396.jpg)
@@ -390,17 +417,16 @@ background-position: 50% 100%
 
 ???
 
-It's a cycle
+While clinicians, program managers, etc. have been working throughout this process, this is when to start **implementing in decision making**
 
 **Knowledge Mobilization Steps**
-- *Identify Measurement Owners*  Identify the committees and individuals responsible for maintaining and improving performance on measures included in the portfolio
--	*Identify Levers for Action*   Assist the team in identifying the key actions available to the organization in its existing functions for improving performance across the portfolio of measures.
--	*Process for Decision Quality*  Work with committees and individuals to implement processes for improved decision quality using data.  Processes are based on research into organizational judgment and decision-making.
--	*Map Flow of Information*  Map the flow of information through committees/departments to clarify patterns of communication and collaborative action.
--	*Initiate PDSA Cycle* Assist team with initial measurements using vendor systems within the framework to evaluate KPIs that allow for measurement, and subsequent dialog about interventions, changes, or improvements as necessary.  
--	*Expert Analysis*  Where detailed analysis is required, provide critical examination, detailed analysis, and recommendations.
+- *Identify Measurement Owners*  Identify responsibility for performance on measures in portfolio
+-	*Identify Levers for Action*   Identify key actions for improving performance across the portfolio
+-	*Process for Decision Quality*  Implement processes for improved decision quality using data.  Based on research into organizational decision-making.
+-	*Map Flow of Information*  Map flow of information through committees/departments to clarify patterns of communication and action.
+-	*Initiate PDSA Cycle* 
+-	*Expert Analysis*  Where required.
 - *Assess Sustainability*
-For all project participants to enter into an on-going sustainment of the work that’s been accomplished so far, and reduce reliance upon external experts.  
 
 ---
 class: center, bottom
