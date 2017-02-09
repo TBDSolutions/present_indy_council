@@ -362,10 +362,12 @@ Select tools to fill the gaps... *example tools*
 - [DSM5 Cross-Cutting Symptom Measures](https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures)
 - [Kennedy Forum supplement](http://thekennedyforum-dot-org.s3.amazonaws.com/documents/MBC_supplement.pdf)
 - [PROMIS measures](http://www.healthmeasures.net/explore-measurement-systems/promis)
-
-- Characteristics of tools
 - Approaches: One tool to rule them all, short suite
-- Educate clinicians to recognize tools as a complement and not a threat
+
+1. Pay providers to use the tool
+2. Ensure the tool can be completed quickly enough to avoid patient burnout.
+3. Create an efficient workflow for the tool.
+4. Integrate data form the tools into the EHR as a routine part of clinical practice.
 
 ---
 class: inverse
