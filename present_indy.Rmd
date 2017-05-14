@@ -18,37 +18,60 @@ background-image: url(http://www.tbdsolutions.com/wp-content/themes/tbdsolutions
 
 [bit.ly/tbd_mbc](http://bit.ly/tbd_mbc)
 ---
-class: inverse, center, middle
 
-# ᗑ
-# Where are we going?
+class: center, middle
 
-???
+# The Why
 
-- Regardless of one's beliefs about the ethics of measurement, the possibility of capturing all necessary details, etc.
-- We are already capturing data, and we will use it if we have it, so we must be purposeful about how we measure individuals
-- Treat our knowledge like a portfolio
-- A comprehensive portfolio has many types of data, and today we'll focus on one which providers are uniquely situated to collect and act upon.
+.pull-left[
+![](rita.jpg)
+]
 
----
-
-background-image: url(https://s-media-cache-ak0.pinimg.com/originals/51/fb/fd/51fbfdeb797a21c36b3d928a17867803.jpg)
+.pull-right[
+![Atkinson family](atkinson_fam.jpg)
+]
 
 ???
-
-- Great art project which had all attendees mark their height on a wall, until the names covered each other up.
-- Data is made up of individuals, and measurement based care will fail if it does not make information meaningful at the individual level as well as in the aggregate.
 
 ---
 class: center, middle
-background-image: url(https://static1.fitbit.com/simple.b-cssdisabled-png.hc67aac363566dacfc23446af553b9bd8.pack?items=%2Fcontent%2Fassets%2Fflex%2Fimages%2Fapp-dashboard%2Fflex.png)
-background-size: 80px
-background-position: 50% 90%
+background-image: url(https://images-na.ssl-images-amazon.com/images/I/413ZHN3409L.jpg)
+background-size: 150px
+background-position: 8% 90%
 
-# ▤  ▶  ☑
-## Person-Centered Measurement
+> ### "...only 18% of psychiatrists and 11% of psychologists in the United States routinely administer symptom rating scales to patients to monitor improvement. This is equivalent to treating hypertension without using a blood pressure cuff" 
 
+.pull-right[
+[Kennedy Forum](https://www.thekennedyforum.org/news/measurement-based-care-issue-brief), *Fixing Behavioral Health Care in America*, 2015
+]
 
+???
+
+- National work on screening, assessment, and outcome tools
+- We have enough tools. We don’t need more — we need effective implementation
+
+---
+class: inverse, center, middle
+
+> ### "For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled." 
+
+.pull-right[
+[Richard Feynman](https://science.ksc.nasa.gov/shuttle/missions/51-l/docs/rogers-commission/Appendix-F.txt), 1986
+]
+
+???
+
+- Feynman's quote is from the Roger's Commission report after the Challenger disaster
+- Substitute "treatment", "funding strategy", etc. in place of "technology"
+- We must always remember that we are doing this work not because of a new fad, or a compliance requirement, or because data is hip now, etc. but because we are seeking to rescue people from a ravaging force of nature
+- Data is only worthwhile inasmuch as it allows us to model truth.
+
+---
+class: inverse, center, middle
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d4/Wikidata_Map_April_2016_Huge.png)
+
+# ᗑ
+# Where are we going?
 
 ???
 
@@ -59,6 +82,9 @@ background-position: 50% 90%
 - New tools (and the creative use of existing tools) allow for a more nuanced and complex understanding of individuals
 - Summarizing person to a single number (e.g. the GAF) is clearly reductive
 - What about 250k measures per day? A [recent study using wearables](http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2001402) did just that
+- We are already capturing data, and are likely to use it if we have it, so we must be purposeful about how we measure individuals
+- Treat our knowledge like a portfolio
+- A comprehensive portfolio has many types of data, and today we'll focus on one which providers are uniquely situated to collect and act upon.
 
 ---
 class: inverse, center, middle
@@ -82,31 +108,13 @@ Some current glimmers of what's coming:
 - now [implemented in HEDIS 2017](http://www.ncqa.org/hedis-quality-measurement/hedis-learning-collaborative/hedis-depression-measures)
 - Functional measures noted as key gap in standard metrics (cf. [NQF Person- and Family-Centered Care Measures](http://www.qualityforum.org/ProjectMeasures.aspx?projectID=73867) )
 
-
----
-class: center, middle
-background-image: url(https://images-na.ssl-images-amazon.com/images/I/413ZHN3409L.jpg)
-background-size: 150px
-background-position: 8% 90%
-
-> ### "...only 18% of psychiatrists and 11% of psychologists in the United States routinely administer symptom rating scales to patients to monitor improvement. This is equivalent to treating hypertension without using a blood pressure cuff" 
-
-.pull-right[
-Kennedy Forum, *Fixing Behavioral Health Care in America*, 2015
-]
-
-???
-
-- National work on screening, assessment, and outcome tools
-- We have enough tools. We don’t need more — we need effective implementation
-
 ---
 class: center, middle
 
 ### *Survey says...*
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width='100%', fig.height=6}
-library(readxl); library(tidyr); library(dplyr)
+library(readxl); library(tidyr); library(dplyr); library(forcats)
 library(plotly)
 
 survey <-
@@ -129,22 +137,29 @@ survey %>%
 
 by_tool <-
   survey %>%
+  mutate(
+    tool = gsub("[[:space:]]", "", tool)
+  ) %>%
   group_by(tool) %>%
   summarize(n = sum(used, na.rm = T)) %>%
-  mutate(tool = factor(tool, levels = unique(tool)[order(n, decreasing = T)])) %>%
+  filter(n > 0) %>%
   ungroup() %>%
-  arrange(desc(n))
+  droplevels() 
 
 by_tool %>%
-  plot_ly(x = ~tool, y = ~n) %>% 
+  plot_ly(
+    x = ~fct_reorder(tool, n, .desc = T), 
+    y = ~n) %>% 
   add_bars() %>% 
-  layout(xaxis = list(title = "", tickangle = 45),
-         yaxis = list(title = "Number of states"))
+  layout(margin = list(b = 150),
+         xaxis = list(title = "", tickangle = 45),
+         yaxis = list(title = "Number of states", range = c(0, 50)))
 
 ```
 
 ???
 
+- Data exists.  Not standard nationally, but there is potential at the state level
 - Check out report [here](http://www.tbdsolutions.com/wp-content/uploads/2016/09/Behavioral-Health-Screening-Assessment-and-Outcomes-Tools.pdf)
 - [Data source](http://www.tbdsolutions.com/wp-content/uploads/2016/09/Michigan-and-National-Screening-Assessment-and-Outcomes-Tools-2016-09-1-1.xlsx)
 
@@ -155,8 +170,10 @@ class: inverse, center, middle
 ### ~~*instead of* people~~
 ### *by* people
 
-
 ???
+
+"To know and not to do is not to know" - Stephen Covey
+We must use data, not just look at it, e.g. Look at FitBit but not exercise more
 
 - 2 typical responses, from the same people: "We're not doing cookie cutter treatment" & "Can't it just tell me what I need to do?!"
 
@@ -180,6 +197,7 @@ background-size: contain
 - Can focus on items endorsed by the person and their supports as important
 - Consider how closely these are aligned with scope, intensity, duration
 - Could use relevant areas to prompt consideration of potential referrals to PT, nursing, OT, etc.
+- Note that the individual view varies from person to person (cf. CAFAS paths)
 
 ---
 class: inverse, center, middle
@@ -328,6 +346,20 @@ class: inverse, center, middle
 # How to get from
 # here to there
 
+???
+
+What do we mean by "there"?
+
+Here are some overheard conversations from an imaginary behavioral health provider:
+
+“Your symptoms seem to have been inching up over our last 3 assessments. This is a pivotal point in time to make changes in your life, based on what we’ve seen from other clients in the past.  Making changes at this point has helped people avoid harm to their family life and relapses with substance abuse.”
+
+“Based on your child’s CAFAS scores, as we’ve been getting to know her over the past 3 months, this is our recommended course of treatment. 86% people with similar needs have had positive outcomes from this course of treatment.”
+
+“We ask you to complete the PHQ-9 because we value how you feel about your treatment, and how you are responding.”
+
+“Based on your assessment, here is a menu of the most relevant services related to your needs. People with similar needs usually chose this service and that service.”
+
 ---
 class: inverse
 background-image: url(https://blogs.vmware.com/cloudops/files/2016/06/gap.jpg)
@@ -338,13 +370,16 @@ background-image: url(https://blogs.vmware.com/cloudops/files/2016/06/gap.jpg)
 
 Gap Analysis to determine what’s missing:
 
-**Cover all conditions / life areas** Do you have assessments that result in structured data, covering each population you serve and appropriate for each point of contact?
+**Cover all conditions / life areas** Does the available data reflect the impact of services on all areas of life which are the target of services?  All areas which inform services?  This assumes that people in a given system/organization have a similar conception of what life areas affect the people and the work they are doing.  While all models are abstractions, there are a number of well-thought out models relevant to behavioral health.  E.g. ...
+
+- [WHO's International Classification of Functioning](http://www.who.int/classifications/icf/en/), which you can browse [here](http://apps.who.int/classifications/icfbrowser/)
+- [NIMH's Research Domain Criteria](https://www.nimh.nih.gov/research-priorities/rdoc/constructs/rdoc-matrix.shtml)
 
 **For each population served** To tackle a treat-to-target approach, that thoroughly uses quantitative assessment process with a common thread throughout, there have to be adequate tools for all of the things you’re seeing people for
 
 **Screening and assessment** Not just a tool, but gaps between a screening tool and an assessment tool. Not enough to say “we have an assessment that measures everything we treat people for”—it’s possible that some assessment are really long, and you only use them once they’ve been in for a month, subsequently missing the screening section. 
 
-**Used in clinical practice** Define expectations around minimum frequency for administration
+**Used in clinical practice** Do you have assessments that result in structured data, covering each population you serve and appropriate for each point of contact?  Define expectations around minimum frequency for administration
 
 **Entered in EMR** 
 
